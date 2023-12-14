@@ -48,11 +48,22 @@ const App = () => {
     setTodos(newArray)
   }
   
+  // Función editTodo
+  const editTodo = (id) => {
+    const newArray = todos.map(todo => {
+      if (todo.id == id) {
+        todo.description = "ME HAN EDITADO"
+      }
+      return todo
+    })
+    setTodos(newArray)
+  }
+
   return (
     <div className='container'>
       <h1>Formularios</h1>
       < Formulario addTodo = {addTodo} />
-      < TodoList todos={todos} deleteTodo={deleteTodo} updateTodo={updateTodo}/>
+      < TodoList todos={todos} deleteTodo={deleteTodo} updateTodo={updateTodo} editTodo={editTodo}/>
     </div>
   )
 }

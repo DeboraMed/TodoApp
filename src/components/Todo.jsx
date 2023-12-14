@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Todo = ({todo, deleteTodo, updateTodo}) => {
+export const Todo = ({todo, deleteTodo, updateTodo, editTodo}) => {
 
   const {id, title, description, priority, state} = todo
 
@@ -14,7 +14,7 @@ export const Todo = ({todo, deleteTodo, updateTodo}) => {
             <p className={state && 'completada'}>{description}</p>
             <div className='d-flex'>
               <button onClick={() => deleteTodo(id)} className='btn btn-sm btn-danger mr-2'>Eliminar</button>
-              <button className='btn btn-sm btn-warning mr-2'>Editar</button>
+              <button onClick={() => editTodo(id)} className='btn btn-sm btn-warning mr-2'>Editar</button>
               <button onClick={() => updateTodo(id)} className='btn btn-sm btn-primary'>Actualizar Estado</button>
             </div>
           </div>
