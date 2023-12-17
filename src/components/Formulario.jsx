@@ -26,7 +26,6 @@ import Swal from "sweetalert2"
      addTodo({
       ...todo,
       id:Date.now(),
-      // state: state === "completada"? true:false
       state: state == "completada"
 
      })
@@ -73,7 +72,6 @@ import Swal from "sweetalert2"
                 <option value="completada">Completada</option>
             </select>
 
-            {/* Añadimos el checkbox */}
             <div className="form-checked mb-2">
               <input 
                 className="form-checked-input"
@@ -103,3 +101,4 @@ import Swal from "sweetalert2"
 }
 
 export default Formulario
+
